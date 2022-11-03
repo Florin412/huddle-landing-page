@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  min-height: 100vh;
+  padding: 3rem 4.5rem;
+  background: url(/images/bg-desktop.svg), hsl(257deg, 40%, 49%);
+  background-size: cover, contain;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  font-family: "Open Sans", sans-serif;
+}
+
+.body .header .logo {
+  width: 14rem;
+}
+.body .main-content {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+.body .main-content .img-section {
+  max-width: 50rem;
+  height: auto;
+}
+.body .main-content .img-section .ilustration-img {
+  width: 100%;
+  height: auto;
+}
+.body .main-content .description-section {
+  max-width: 35rem;
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3.5rem;
+  flex-shrink: 2;
+}
+.body .main-content .description-section .title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+.body .main-content .description-section .description {
+  font-size: 1.2rem;
+  color: hsl(0deg, 0%, 90%);
+  line-height: 1.4;
+}
+.body .main-content .description-section .btn {
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: hsl(257deg, 40%, 49%);
+  background-color: white;
+  align-self: flex-start;
+  border-radius: 10000px;
+  padding: 0.85rem 5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s ease-out;
+  box-shadow: 9px 11px 20px 0px #483c6c;
+}
+.body .main-content .description-section .btn:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
+}
+.body .footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.body .footer .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.8em;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  fill: white;
+  transition: 0.2s linear;
+}
+.body .footer .icon:hover {
+  fill: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
+}
+
+@media (max-width: 1200px) {
+  .body .main-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 550px));
+    justify-content: center;
+  }
+  .body .main-content .description-section {
+    text-align: center;
+  }
+  .body .main-content .description-section .btn {
+    align-self: center;
+  }
+  .body .footer {
+    justify-content: center;
+    margin-top: 6rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,119 @@
+@use "general";
+@use "variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.body {
+  // Header.
+  .header {
+    .logo {
+      width: 14rem;
+    }
+  }
+
+  //   Main Content.
+  .main-content {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 5rem;
+
+    .img-section {
+      max-width: 50rem;
+      height: auto;
+
+      .ilustration-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .description-section {
+      max-width: 35rem;
+      color: hsl(0, 0%, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 3.5rem;
+      flex-shrink: 2;
+
+      .title {
+        font-size: 2.5rem;
+        line-height: 1.5;
+      }
+
+      .description {
+        font-size: 1.2rem;
+        color: hsl(0, 0%, 90%);
+        line-height: 1.4;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        font-family: inherit;
+        color: $violet;
+        background-color: white;
+        align-self: flex-start;
+        border-radius: 10000px;
+        padding: 0.85rem 5rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.15s ease-out;
+        box-shadow: 9px 11px 20px 0px #483c6c;
+
+        &:hover {
+          background-color: $soft-magenta;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Footer.
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 3rem;
+
+    .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      padding: 0.8em;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      fill: white;
+      transition: 0.2s linear;
+
+      &:hover {
+        fill: $soft-magenta;
+        border-color: $soft-magenta;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .body {
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(auto, 550px));
+      justify-content: center;
+
+      .description-section {
+        text-align: center;
+
+        .btn {
+          align-self: center;
+        }
+      }
+    }
+
+    .footer {
+      justify-content: center;
+      margin-top: 6rem;
+    }
+  }
+}
